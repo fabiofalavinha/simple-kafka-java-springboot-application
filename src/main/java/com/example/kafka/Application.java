@@ -43,7 +43,7 @@ public class Application {
 		return new StringJsonMessageConverter();
 	}
 
-	@KafkaListener(id = "fooGroup", topics = "topic1")
+	@KafkaListener(id = "sampleMessageGroup", topics = "topic1")
 	public void listen(SampleMessage sampleMessage) {
 		logger.info("Received: " + sampleMessage);
 		if (sampleMessage.getContent().startsWith("fail")) {
